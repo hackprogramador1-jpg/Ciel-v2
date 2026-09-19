@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#020711">
+<title>CIEL — Agente Pessoal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img class="background" src="ciel-background.jpg" alt="" aria-hidden="true">
+<div class="overlay" aria-hidden="true"></div>
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<div class="app">
+<header class="topbar">
+  <div><div class="brand">CIEL</div><div class="subtitle">AGENTE PESSOAL</div></div>
+  <div class="connection"><span id="connectionDot"></span><span id="connectionText">PRONTA</span></div>
+</header>
+<div class="datetime" id="datetime">Carregando...</div>
+
+<main class="main">
+  <div class="core" id="core">
+    <div class="core-glow"></div>
+    <canvas id="coreCanvas"></canvas>
+    <div class="core-center">
+      <div class="core-name">CIEL</div>
+      <div class="state" id="state">AGUARDANDO</div>
+    </div>
+  </div>
+  <div class="activity" id="activity">Núcleo CIEL ativo</div>
+</main>
+
+<section class="conversation">
+  <div class="reply" id="reply" aria-live="polite">Olá. Eu sou a CIEL. Agora tenho um motor de inteligência conectado.</div>
+  <div class="interim" id="interim"></div>
+  <div class="composer">
+    <input id="input" type="text" autocomplete="off" spellcheck="false" placeholder="Fale comigo ou digite aqui...">
+    <button id="micButton" class="icon-button mic" type="button" aria-label="Ativar microfone">🎙️</button>
+    <button id="sendButton" class="icon-button send" type="button" aria-label="Enviar">➤</button>
+  </div>
+  <div class="quick-actions">
+    <button type="button" id="agendaButton">📅 Agenda</button>
+    <button type="button" id="timeButton">🕒 Data e hora</button>
+    <button type="button" id="clearMemoryButton">🧠 Limpar memória</button>
+  </div>
+  <div class="notice" id="notice">Texto funciona sem microfone. Para inteligência, configure OPENAI_API_KEY no Vercel.</div>
+</section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

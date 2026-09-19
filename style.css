@@ -1,0 +1,20 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#01050c;color:#eaf8ff;font-family:Arial,Helvetica,sans-serif}
+body{position:relative}.background{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;filter:brightness(.5) saturate(1.3);z-index:-4}
+.overlay{position:fixed;inset:0;background:radial-gradient(circle at 50% 43%,rgba(0,168,255,.16),transparent 34%),linear-gradient(90deg,rgba(0,3,11,.88),rgba(0,7,17,.62),rgba(0,2,9,.9));z-index:-3}
+#particles{position:fixed;inset:0;width:100%;height:100%;z-index:-2}
+.app{width:100%;height:100%;max-width:960px;margin:auto;display:flex;flex-direction:column;padding:16px 16px calc(12px + env(safe-area-inset-bottom))}
+.topbar{display:flex;align-items:center;justify-content:space-between}.brand{font-size:22px;font-weight:800;letter-spacing:6px;text-shadow:0 0 18px rgba(35,207,255,.55)}
+.subtitle{font-size:8px;letter-spacing:3px;color:#668d9c;margin-top:3px}.connection{display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:2px;color:#6edfff}
+#connectionDot{width:7px;height:7px;border-radius:50%;background:#39e6ff;box-shadow:0 0 13px #39e6ff}.datetime{text-align:center;margin-top:4px;font-size:11px;color:#a5cad8;letter-spacing:.7px}
+.main{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center}.core{width:min(78vw,430px);height:min(78vw,430px);max-width:56vh;max-height:56vh;position:relative;filter:drop-shadow(0 0 30px rgba(0,178,255,.25))}
+.core canvas{position:absolute;inset:0;width:100%;height:100%}.core-glow{position:absolute;inset:13%;border-radius:50%;background:radial-gradient(circle,rgba(0,195,255,.24),rgba(0,72,140,.07) 43%,transparent 70%);animation:breath 2.8s ease-in-out infinite}
+.core-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}.core-name{font-size:26px;font-weight:700;letter-spacing:8px;text-shadow:0 0 20px #29d8ff}
+.state{margin-top:9px;font-size:9px;letter-spacing:3px;color:#83ddf5}.activity{position:absolute;bottom:5px;left:0;right:0;text-align:center;color:#52727f;font-size:9px;letter-spacing:1px}
+.conversation{border:1px solid rgba(78,205,255,.2);background:rgba(1,10,21,.76);backdrop-filter:blur(14px);border-radius:18px;padding:12px}
+.reply{min-height:42px;max-height:92px;overflow:auto;font-size:14px;line-height:1.45;color:#dff8ff}.interim{min-height:0;margin-top:3px;color:#6091a3;font-size:12px;font-style:italic}
+.composer{display:flex;gap:8px;margin-top:9px}#input{min-width:0;flex:1;border:1px solid rgba(89,211,255,.24);border-radius:13px;background:rgba(0,7,15,.9);color:#f4fcff;padding:13px;outline:none;font-size:14px}
+#input:focus{border-color:rgba(89,211,255,.65);box-shadow:0 0 15px rgba(0,186,255,.1)}button{font:inherit;color:#c9f6ff;border:1px solid rgba(89,211,255,.17);background:#062137;border-radius:12px;cursor:pointer}
+button:active{transform:scale(.97)}.icon-button{width:50px;font-size:19px}.mic.active{background:#0080a7;box-shadow:0 0 24px rgba(0,225,255,.4)}.quick-actions{display:flex;justify-content:center;gap:7px;margin-top:9px;flex-wrap:wrap}
+.quick-actions button{font-size:10px;letter-spacing:.5px;padding:9px 10px;background:rgba(0,17,31,.85)}.notice{text-align:center;margin-top:7px;font-size:9px;color:#5f8492;line-height:1.3}
+@keyframes breath{50%{transform:scale(1.08);opacity:.62}}@media(min-width:700px){.app{padding:20px 28px}.brand{font-size:24px}}
